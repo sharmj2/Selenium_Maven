@@ -9,8 +9,10 @@
         <methods>
           <include name="cleanup"/>
           <include name="dataSetup"/>
+          <include name="Test2"/>
           <include name="Test3"/>
           <include name="close"/>
+          <include name="Test1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testcases.SimplilearnLoginTest -->

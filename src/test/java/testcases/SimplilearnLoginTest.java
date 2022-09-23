@@ -10,6 +10,8 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.LogStatus;
+
 import pages.LoginPage;
 
 public class SimplilearnLoginTest extends BaseClass {
@@ -17,7 +19,7 @@ public class SimplilearnLoginTest extends BaseClass {
 	
 	@Test
 	public void Test1() {
-		
+		test.log(LogStatus.INFO, "Test 1 started");
 
 		LoginPage lp = new LoginPage(driver);
 		lp.login("abc@xyz.com","Test@1234");
@@ -51,6 +53,8 @@ public class SimplilearnLoginTest extends BaseClass {
 		@Test
 		@Parameters({"uname","pwd"})
 	public void Test2(String username, String password) {
+			
+		test.log(LogStatus.INFO, "Test 2 started");	
 		LoginPage lp = new LoginPage(driver);
 		lp.login(username,password);
 			
@@ -60,6 +64,7 @@ public class SimplilearnLoginTest extends BaseClass {
 		@Test
 	public void Test3() {
 			
+			test.log(LogStatus.INFO, "Test 3 started");
 			String username = sheet.getRow(1).getCell(0).getStringCellValue();
 			String password = sheet.getRow(1).getCell(1).getStringCellValue();
 			LoginPage lp = new LoginPage(driver);
